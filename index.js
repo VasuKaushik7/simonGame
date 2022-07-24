@@ -7,10 +7,11 @@ $('.btn').click(function (event) {
             $('.' + event.currentTarget.id).removeClass('pressed');
         }, 100);
 
-        var audio = new Audio('sounds/' + event.currentTarget.id + '.mp3');
-        audio.play();
+        
         if (event.currentTarget.id === globalGameArray[correctlyidentified]) {
             correctlyidentified++;
+            var audio = new Audio('sounds/' + event.currentTarget.id + '.mp3');
+            audio.play();
             if (correctlyidentified === globalGameArray.length) {
                 stage++
                 $('#level-title').text('Stage ' + stage);
@@ -30,6 +31,8 @@ $('.btn').click(function (event) {
             // isGameStarted=false;
             correctlyidentified=0;
             gameOver=true;
+            var audio = new Audio('sounds/wrong.mp3');
+            audio.play();
         }
     }
     else{
