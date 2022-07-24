@@ -37,7 +37,7 @@ $('.btn').click(function (event) {
     }
 })
 
-$(document).keypress(function () {
+$(document).click(function () {
     gameStart();
 
 })
