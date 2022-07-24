@@ -47,7 +47,7 @@ $(document).click(function () {
 var globarStarterArray = ['blue', 'green', 'red', 'yellow']
 var isGameStarted = false;
 var globalGameArray = [];
-let stage = 1;
+var stage = 1;
 var correctlyidentified = 0;
 var buttonClicked=false;
 var gameOver=false;
