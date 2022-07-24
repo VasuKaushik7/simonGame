@@ -1,7 +1,7 @@
 $('.btn').click(function (event) {
-    console.log('clicked');
+    ////console.log('clicked');
     if (isGameStarted && !gameOver) {
-        console.log(event.currentTarget.id);
+        //console.log(event.currentTarget.id);
         $('.' + event.currentTarget.id).addClass('pressed');
         setTimeout(() => {
             $('.' + event.currentTarget.id).removeClass('pressed');
@@ -18,9 +18,9 @@ $('.btn').click(function (event) {
                 correctlyidentified=0;
                 buttonClicked=true;
                 gameStart();
-            }
+            } 
             else {
-                console.log('doNothing');
+                //console.log('doNothing');
                 
             }
 
@@ -36,7 +36,7 @@ $('.btn').click(function (event) {
         }
     }
     else{
-        console.log('gameOver')
+        //console.log('gameOver')
     }
 })
 
@@ -52,13 +52,13 @@ var correctlyidentified = 0;
 var buttonClicked=false;
 var gameOver=false;
 function gameStart() {
-    console.log("game start called",isGameStarted);
+    //console.log("game start called",isGameStarted);
     if(!isGameStarted || buttonClicked){
     isGameStarted = true;
-    // console.log("loopCount", loopCount)
+    // //console.log("loopCount", loopCount)
     $('#level-title').text('Stage ' + stage);
     var randomButton = Math.floor(Math.random() * 4);
-    console.log("randomButton", randomButton);
+    //console.log("randomButton", randomButton);
     $('.' + globarStarterArray[randomButton]).fadeOut().fadeIn();
     var audio = new Audio('sounds/' + globarStarterArray[randomButton] + '.mp3');
     audio.play();
